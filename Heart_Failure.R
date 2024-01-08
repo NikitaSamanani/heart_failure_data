@@ -206,7 +206,7 @@ predicted <- plogis(predict(model.final, testData))
 
 summary(model.final)
 
-#MODEL EVALUATION
+# MODEL EVALUATION
 # Assuming 'predicted' contains your predicted values
 roc_obj <- roc(testData$DEATH_EVENT, predicted)
 
