@@ -1,4 +1,4 @@
-# heart_failure_data
+# Heart_failure_data
 Exploratory Data Analysis for Heart Failure
 
 The heart failure dataset used for this study was clean and did not require much preprocessing. The dataset was looked for null values, and there were none of them. The outcome variable under consideration was binary of character type, and I converted it into numerical binary variables for further analysis. The time variable present in the dataset was insignificant to answer the research question; I dropped that variable from the dataset and continued with the rest of the variables for analysis and modeling.
