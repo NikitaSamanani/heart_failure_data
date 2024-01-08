@@ -85,8 +85,7 @@ plot(serum_sodium, ejection_fraction, main="Serum Sodium & Ejection Fraction ",
 plot(serum_creatinine, ejection_fraction, main="Serum Creatinine & Ejection Fraction",
      xlab="Serum Creatinine", ylab="Ejection Fraction", pch=24, col="blue", cex=1)
 
-#The column named 'time' does not seems to make any sense for analysis,
-#thus we dropped that column from the data frame
+#The column named 'time' does not seems to make any sense for analysis, thus we dropped that column from the data frame
 
 df = subset(my_data, select = -c(time))
 df
@@ -114,9 +113,10 @@ qqp[[1]]
 #Compute two-samples Wilcoxon test  
 
 ###The Mann–Whitney U test (or Wilcoxon rank–sum test), applied to each feature in relation 
-#  to the death event target, detects whether we can reject the null hypothesis that the distribution of the each feature for the groups of samples defined by death event are the same.
+#to the death event target, detects whether we can reject the null hypothesis that the distribution of the each feature for the groups of samples defined by death event are the same.
 
 # For Age
+
 res <- wilcox.test(age ~ DEATH_EVENT , data = data1,
                    exact = FALSE)
 res
@@ -125,6 +125,7 @@ res
 
 
 #For ejection fraction
+
 res <- wilcox.test(ejection_fraction ~ DEATH_EVENT , data = data1,
                    exact = FALSE)
 res
